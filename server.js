@@ -1,4 +1,5 @@
-const express = require("express");
+const express = require('express');
+
 const app = express();
 const port = 3000;
 
@@ -9,7 +10,7 @@ function randomInteger(pMin = 1, pMax = 1_000_000_000) {
   pMin = Math.round(pMin);
   pMax = Math.round(pMax);
   if (pMax < pMin) {
-    let t = pMin;
+    const t = pMin;
     pMin = pMax;
     pMax = t;
   }
@@ -25,11 +26,11 @@ function randomEvenInteger(min, max) {
 }
 
 let arr = [];
-app.get("/initialize", (req, res) => {
+app.get('/initialize', (req, res) => {
   const size = randomEvenInteger(20, 100);
   arr = [];
   for (let i = 0; i < size; i++) {
-    let row = [];
+    const row = [];
     for (let j = 0; j < size; j++) {
       row.push(randomInteger(0, size - 1));
     }
@@ -39,7 +40,7 @@ app.get("/initialize", (req, res) => {
   res.json({ size });
 });
 
-app.get("/value", (req, res) => {
+app.get('/value', (req, res) => {
   const { rowIndex, colIndex } = req.query;
   res.json({ value: arr[rowIndex][colIndex] });
 });
