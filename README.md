@@ -9,13 +9,13 @@ You have a server which stores a large square 2d array with even number of rows 
 1. Clone the project
 
 ```sh
-git clone https://github.com/pixyj/mb-async-live-review-2 async_live_review
+git clone https://github.com/agraharidheeraj/async-practice-2.git
 ```
 
 2. cd to the `async_live_review` directory
 
 ```sh
-cd async_live_review
+cd async-review-2
 ```
 
 3. Install dependencies
